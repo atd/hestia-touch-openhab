@@ -50,7 +50,8 @@ Bridge mqtt:broker:mosquitto "Mosquitto MQTT Broker" [ host="localhost", secure=
       Type string : mode "Heating Mode" [
         commandTopic="hestia/local/cmnd/heatingmode",
         stateTopic="hestia/local/stat/heatingmode",
-        retained=true
+        retained=true,
+        postCommand=true
       ]
       Type switch : control "Heating Switch" [
         commandTopic="hestia/local/cmnd/heatingstate/POWER",
